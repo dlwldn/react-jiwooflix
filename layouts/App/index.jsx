@@ -1,7 +1,36 @@
 import React from 'react';
+import { Switch, Route } from 'react-router';
+
+import Movie from '@layouts/Movie';
+import Home from '@pages/Home';
+
 
 const App = () => {
-  return <div>초기 세팅입ddd니다.</div>;
+  return (
+    <Switch>
+      <Route exact path='/' render = {()=>
+        <Movie>
+
+        </Movie>
+      }/>
+      <Route path='/movie' render = {()=> 
+        <Movie>
+
+        </Movie>
+      }/>
+      <Route path='/tv' render = {()=> 
+        <Movie>
+
+        </Movie>
+      }/>
+      <Route path='/search' render = {()=> 
+        <Movie>
+
+        </Movie>
+      }/>
+    </Switch>
+    
+  )
 };
 
 export default App;
