@@ -12,15 +12,5 @@ export const MovieListWrap = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 125px);
     gap: 15px;
-
-    & > li {
-      
-  
-      & > img {
-        width: 100%;
-      }
-    }
   }
-
-
 `
