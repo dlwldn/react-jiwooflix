@@ -10,7 +10,7 @@ export const MovieListWrap = styled.div`
   & > ul {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 125px);
+    grid-template-columns: repeat(auto-fill, 200px);
     gap: 15px;
   }
 `

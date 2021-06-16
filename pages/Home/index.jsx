@@ -20,6 +20,7 @@ const Home = () => {
     )
     .then(
       axios.spread((res1, res2, res3, res4)=> {
+        console.log(res1, res2, res3, res4);
         const res1Data = {title: "Trending" , movieData: res1.data.results};
         const res2Data = {title: "Romance" , movieData: res2.data.results};
         const res3Data = {title: "Comedy" , movieData: res3.data.results};
