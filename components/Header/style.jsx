@@ -11,6 +11,7 @@ export const HeaderWrap = styled.header`
   box-shadow: rgb(0 0 0 / 80%) 0px 1px 5px 2px;
   display: flex;
   align-items: center;
+  z-index: 50;
 
   & > h1 {
     font-size: 1.2rem;

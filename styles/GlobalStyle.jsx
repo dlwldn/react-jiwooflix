@@ -9,12 +9,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    background-color: #000;
+    background-color: rgb(34, 40, 49);
   }
 
   body {
     padding-top: 50px;
     color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
   a {
