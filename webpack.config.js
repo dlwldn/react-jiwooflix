@@ -51,7 +51,9 @@ const config = {
       },
     ],
   },
-  plugins: [new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' })],
+  plugins: [
+    new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' }),
+  ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
@@ -61,6 +63,7 @@ const config = {
     historyApiFallback: true,
     port: 3090,
     publicPath: '/dist/',
+    open: true,
   },
 };
 

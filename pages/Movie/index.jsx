@@ -36,7 +36,9 @@ const Movie = () => {
 
   if(isLoading) {
     return (
-      <Loading />
+      <Container>
+        <Loading />
+      </Container>
     )
   }
 

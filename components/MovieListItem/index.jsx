@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { MovieListItemWrap, HoverWrap, ListInfoWrap } from './style';
-import { BASE_URL } from '@utils/requests';
+import { IMAGE_BASE_URL } from '@utils/requests';
 
 const MovieListItem = ({ movieListItem }) => {
+  const { location } = useHistory();
+
   return (
     <MovieListItemWrap>
-      <Link to={`./${movieListItem.id}`}>
+      <Link to={`${location.pathname}/${movieListItem.id}`}>
         <div>
-          <img src={`${BASE_URL}${movieListItem.poster_path}`} alt={movieListItem.id} /> 
+          <img src={`${IMAGE_BASE_URL}${movieListItem.poster_path}`} alt={movieListItem.id} /> 
 
           <HoverWrap className="hover-wrap">
             <div>
