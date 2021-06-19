@@ -6,5 +6,5 @@ export const Wrapper = styled.div`
 
 export const MainWrap = styled.main`
   width: 100%;
-  padding: 30px 15px;
+  padding: 30px 25px;
 `

@@ -19,6 +19,7 @@ export const MovieListItemWrap = styled.li`
     & > img {
       width: 100%;
       min-height: 302px;
+      background-color: rgb(57, 62, 70);
     }
   }
 `

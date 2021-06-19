@@ -14,17 +14,17 @@ const Movie = () => {
   useEffect(()=> {
     setIsLoading(true);
     axios.all(
-      [fetcher.get(requests.fetchTrendingMovies), 
-       fetcher.get(requests.fetchRomanceMovies), 
-       fetcher.get(requests.fetchComedyMovies), 
-       fetcher.get(requests.fetchHorrorMovies)]
+      [fetcher.get(requests.fetchNowPlayingMovies), 
+       fetcher.get(requests.fetchPopularMovies), 
+       fetcher.get(requests.fetchTopRatedMovies), 
+       fetcher.get(requests.fetchUpComingMovies)]
     )
     .then(
       axios.spread((res1, res2, res3, res4)=> {
-        const res1Data = {title: "트렌딩" , movieData: res1.data.results};
-        const res2Data = {title: "로맨스" , movieData: res2.data.results};
-        const res3Data = {title: "코메디" , movieData: res3.data.results};
-        const res4Data = {title: "호러" , movieData: res4.data.results};
+        const res1Data = {title: "현재 상영중" , movieData: res1.data.results};
+        const res2Data = {title: "가장 인기있는" , movieData: res2.data.results};
+        const res3Data = {title: "최고 평점" , movieData: res3.data.results};
+        const res4Data = {title: "개봉 예정" , movieData: res4.data.results};
         setMovieDataList([res1Data, res2Data, res3Data, res4Data]);
         setIsLoading(false);
       })

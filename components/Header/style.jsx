@@ -6,7 +6,7 @@ export const HeaderWrap = styled.header`
   left: 0;
   width: 100%;
   height: 50px;
-  padding: 0 15px;
+  padding: 0 25px;
   background-color: rgba(20, 20, 20, 0.8);
   box-shadow: rgb(0 0 0 / 80%) 0px 1px 5px 2px;
   display: flex;

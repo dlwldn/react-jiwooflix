@@ -11,7 +11,12 @@ const MovieListItem = ({ movieListItem }) => {
     <MovieListItemWrap>
       <Link to={`${location.pathname}/${movieListItem.id}`}>
         <div>
-          <img src={`${IMAGE_BASE_URL}${movieListItem.poster_path}`} alt={movieListItem.id} /> 
+          {movieListItem.poster_path 
+            ?
+              <img src={`${IMAGE_BASE_URL}${movieListItem.poster_path}`} alt={movieListItem.title} /> 
+            :
+              <div style={{width: '100%', minHeight: '302px', backgroundColor: 'rgb(57, 62, 70)'}}>이미지가 없어요</div>
+          }
 
           <HoverWrap className="hover-wrap">
             <div>

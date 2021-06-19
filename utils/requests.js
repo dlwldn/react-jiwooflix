@@ -10,6 +10,11 @@ const requests = {
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27&language=ko`,
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749&language=ko`,
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99&language=ko`,
+
+  fetchNowPlayingMovies: `/movie/now_playing?api_key=${API_KEY}&language=ko&page=1&region=KR`,
+  fetchPopularMovies: `/movie/popular?api_key=${API_KEY}&language=ko&page=1&region=KR`,
+  fetchTopRatedMovies: `/movie/top_rated?api_key=${API_KEY}&language=ko&page=1&region=KR`,
+  fetchUpComingMovies: `/movie/upcoming?api_key=${API_KEY}&language=ko&page=1&region=KR`,
   fetchTodayTv: `/tv/airing_today?api_key=${API_KEY}&language=ko&page=1`,
   fetchPopularTV: `/tv/popular?api_key=${API_KEY}&language=ko&page=1`,
   fetchCurrentOnAirTv: `/tv/on_the_air?api_key=${API_KEY}&language=ko&page=1`,

@@ -6,7 +6,7 @@ import Header from '@components/Header';
 const Container = ({ children }) => {
   return (
     <Wrapper>
-      <Header />
+      <Header className="header"/>
       <MainWrap>
         {children}
       </MainWrap>
