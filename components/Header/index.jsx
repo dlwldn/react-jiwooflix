@@ -1,10 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderWrap } from './style';
 
 const Header = () => {
+  const [isScrollTop, setIsScrollTop] = useState(true);
+
+  useEffect(()=> {
+    window.addEventListener('scroll', scrollControl);
+
+    return () => {
+      window.removeEventListener('scroll', scrollControl);
+    }
+  }, [])
+
+  const scrollControl = () => {
+    if(window.scrollY === 0) {
+      setIsScrollTop(true);
+    } else {
+      setIsScrollTop(false);
+    }
+  }
+
   return (
-    <HeaderWrap>
+    <HeaderWrap scroll={isScrollTop}>
       <h1>
         <Link to="/">
           JiwooFlix

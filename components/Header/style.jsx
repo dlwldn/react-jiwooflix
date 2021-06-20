@@ -7,11 +7,12 @@ export const HeaderWrap = styled.header`
   width: 100%;
   height: 50px;
   padding: 0 25px;
-  background-color: rgba(20, 20, 20, 0.8);
+  background-color: ${props => props.scroll ? 'unset' : 'rgba(20, 20, 20, 1)'};
   box-shadow: rgb(0 0 0 / 80%) 0px 1px 5px 2px;
   display: flex;
   align-items: center;
   z-index: 50;
+  transition: 0.3s;
 
   & > h1 {
     font-size: 1.2rem;
