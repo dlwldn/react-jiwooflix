@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { HeaderWrap } from './style';
 
 const Header = () => {
   const [isScrollTop, setIsScrollTop] = useState(true);
+  const activeStyle = {
+    borderBottom: '2px solid yellow'
+  }
 
   useEffect(()=> {
     window.addEventListener('scroll', scrollControl);
@@ -31,19 +34,19 @@ const Header = () => {
 
       <ul>
         <li>
-          <Link to="/movie">
+          <NavLink to="/movie" activeStyle={activeStyle}>
             Movies
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/tv">
+          <NavLink to="/tv" activeStyle={activeStyle}>
             TV
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/search">
+          <NavLink to="/search" activeStyle={activeStyle}>
             Search
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </HeaderWrap>
